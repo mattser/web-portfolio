@@ -1,0 +1,25 @@
+// Colour Variables
+$back-main: #1B2A41;
+$back-two: #324A5F;
+$back-three: #56697B;
+$bar: #0C1821;
+$white: #eee;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: $white;
+  border-radius: 10px;
+  margin: 10px;
+}
+nav {
+  height: 50px;
+  display: flex;
+  background-color: $bar;
+  align-items: center;
+  justify-content: flex-end;
+}
