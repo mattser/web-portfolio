@@ -26,7 +26,7 @@ nav {
 }
 .landing-page {
   color: $white;
-  padding: 20px 0 50px 10px;
+  padding: 20px 20px 50px 10px;
   background-color: $back-main;
 
   h1 {
@@ -43,9 +43,18 @@ nav {
     overflow: hidden;
     border-right: 0.15em solid $white;
     margin: 0 auto;
+    white-space: nowrap;
     animation:
       typing 3.5s steps(40,end),
       blink-caret .75s step-end infinite;
+  }
+  @keyframes typing {
+    from {width: 0}
+    to {width: 100%;}
+  }
+  @keyframes blink-caret {
+    from, to {border-color:transparent}
+    50% {border-color: $white;}
   }
 }
 .stack-page {

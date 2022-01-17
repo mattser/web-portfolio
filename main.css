@@ -28,7 +28,7 @@ nav {
 
 .landing-page {
   color: #eee;
-  padding: 20px 0 50px 10px;
+  padding: 20px 20px 50px 10px;
   background-color: #1B2A41;
 }
 
@@ -48,8 +48,45 @@ nav {
   overflow: hidden;
   border-right: 0.15em solid #eee;
   margin: 0 auto;
+  white-space: nowrap;
   -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
           animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #eee;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #eee;
+  }
 }
 
 .stack-page {
