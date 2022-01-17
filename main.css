@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Inconsolata', monospace;
-  background-color: #1B2A41;
 }
 
 .icon {
@@ -29,7 +28,8 @@ nav {
 
 .landing-page {
   color: #eee;
-  margin: 20px 0 0 10px;
+  padding: 20px 0 50px 10px;
+  background-color: #1B2A41;
 }
 
 .landing-page h1 {
@@ -41,6 +41,42 @@ nav {
 }
 
 .landing-page__bottom {
-  margin-top: 200px;
+  margin-top: 300px;
+}
+
+.stack-page {
+  background-color: #324A5F;
+  color: #eee;
+}
+
+.stack-page__top {
+  padding: 0px 0 0 10px;
+}
+
+.stack-page__top p {
+  padding-bottom: 20px;
+}
+
+.stack-page__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.stack-page__content .content__stack-item {
+  padding: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cut-out {
+  margin: auto auto 50px auto;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
