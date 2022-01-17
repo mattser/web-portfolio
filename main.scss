@@ -30,7 +30,7 @@ nav {
   background-color: $back-main;
 
   h1 {
-    font-size: 3em;
+    font-size: 2.8em;
   }
   p {
     margin-top: 10px;
@@ -38,6 +38,14 @@ nav {
 
   &__bottom {
     margin-top: 300px;
+  }
+  .typed h1 {
+    overflow: hidden;
+    border-right: 0.15em solid $white;
+    margin: 0 auto;
+    animation:
+      typing 3.5s steps(40,end),
+      blink-caret .75s step-end infinite;
   }
 }
 .stack-page {
