@@ -134,14 +134,16 @@ nav {
   margin: 10px;
 }
 
-.projects-page__content .content__project h3 {
-  margin-bottom: 3px;
+.projects-page__content .content__project h2 {
+  margin-bottom: 10px;
+  font-size: 38px;
 }
 
 .projects-page__content .content__project .project_image {
   width: 300px;
   height: 300px;
   background-color: #eee;
+  margin-bottom: 5px;
 }
 
 .cut-out {
