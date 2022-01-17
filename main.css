@@ -28,12 +28,12 @@ nav {
 
 .landing-page {
   color: #eee;
-  padding: 20px 0 50px 10px;
+  padding: 20px 20px 50px 10px;
   background-color: #1B2A41;
 }
 
 .landing-page h1 {
-  font-size: 3em;
+  font-size: 2.8em;
 }
 
 .landing-page p {
@@ -42,6 +42,46 @@ nav {
 
 .landing-page__bottom {
   margin-top: 300px;
+}
+
+.landing-page .typed h1 {
+  overflow: hidden;
+  border-right: 0.15em solid #eee;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-animation: typing 1s steps(24), blink 0.75s step-end infinite;
+          animation: typing 1s steps(24), blink 0.75s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 .stack-page {
