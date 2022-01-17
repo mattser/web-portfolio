@@ -43,18 +43,17 @@ nav {
     overflow: hidden;
     border-right: 0.15em solid $white;
     margin: 0;
+    padding: 0;
     white-space: nowrap;
     animation:
-      typing 0.5s steps(13,end),
-      blink-caret .75s step-end infinite;
+      typing 1s steps(24), blink .75s step-end infinite;
   }
   @keyframes typing {
     from {width: 0}
     to {width: 100%;}
   }
-  @keyframes blink-caret {
-    from, to {border-color:transparent}
-    50% {border-color: $white;}
+  @keyframes blink {
+    50% {border-color: transparent}
   }
 }
 .stack-page {

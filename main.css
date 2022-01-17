@@ -48,9 +48,10 @@ nav {
   overflow: hidden;
   border-right: 0.15em solid #eee;
   margin: 0;
+  padding: 0;
   white-space: nowrap;
-  -webkit-animation: typing 0.5s steps(13, end), blink-caret 0.75s step-end infinite;
-          animation: typing 0.5s steps(13, end), blink-caret 0.75s step-end infinite;
+  -webkit-animation: typing 1s steps(24), blink 0.75s step-end infinite;
+          animation: typing 1s steps(24), blink 0.75s step-end infinite;
 }
 
 @-webkit-keyframes typing {
@@ -71,21 +72,15 @@ nav {
   }
 }
 
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
+@-webkit-keyframes blink {
   50% {
-    border-color: #eee;
+    border-color: transparent;
   }
 }
 
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
+@keyframes blink {
   50% {
-    border-color: #eee;
+    border-color: transparent;
   }
 }
 
