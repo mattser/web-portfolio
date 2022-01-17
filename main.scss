@@ -86,9 +86,10 @@ nav {
   &__content {
     margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin: 10px;
+    width: 310px;
     .content__project {
       h2 {
         margin-bottom: 10px;
