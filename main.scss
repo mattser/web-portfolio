@@ -84,19 +84,24 @@ nav {
   background-color: $back-three;
 
   &__content {
-    margin-top: 50px;
+    margin: 50px auto auto auto;
+    border: 1px solid black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 10px;
-    width: 310px;
+    
+    padding: 5px;
     .content__project {
+      border: 1px dashed blue;
+      padding: 10px;
+      width: 310px;
+      
       h2 {
         margin-bottom: 10px;
         font-size: 38px;
       }
       .project_image {
-        width: 300px;
+        width: 100%;
         height: 300px;
         background-color: $white;
         margin-bottom: 5px;
