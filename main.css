@@ -153,6 +153,29 @@ nav {
 
 .contact-page {
   background-color: #1B2A41;
+  padding: 0 10px;
+}
+
+.contact-page__content {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-page__content .content__item {
+  margin: 10px 100px 10px 0;
+}
+
+.contact-page__content .icon {
+  margin: 10px auto;
 }
 
 .cut-out {
