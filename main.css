@@ -168,6 +168,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 50px;
 }
 
 .contact-page__content .content__item {
@@ -176,6 +177,20 @@ nav {
 
 .contact-page__content .icon {
   margin: 10px auto;
+}
+
+.contact-page a:hover {
+  color: lightgray;
+}
+
+footer {
+  background-color: #0C1821;
+  height: 40px;
+  text-align: center;
+}
+
+footer p {
+  padding: 10px;
 }
 
 .cut-out {
