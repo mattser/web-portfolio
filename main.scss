@@ -84,13 +84,15 @@ nav {
   background-color: $back-three;
 
   &__content {
-    margin-top: 50px;
+    margin: 50px auto auto auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 10px;
-    width: 310px;
+    
+    padding: 5px;
     .content__project {
+      padding: 20px;
+      width: 320px;
       h2 {
         margin-bottom: 10px;
         font-size: 38px;

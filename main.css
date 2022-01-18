@@ -122,16 +122,21 @@ nav {
 }
 
 .projects-page__content {
-  margin-top: 50px;
+  margin: 50px auto auto auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 10px;
-  width: 310px;
+  padding: 5px;
+}
+
+.projects-page__content .content__project {
+  padding: 20px;
+  width: 320px;
 }
 
 .projects-page__content .content__project h2 {
