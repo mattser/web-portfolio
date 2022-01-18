@@ -151,8 +151,60 @@ nav {
   margin-bottom: 5px;
 }
 
+.contact-page {
+  background-color: #1B2A41;
+  padding: 0 10px;
+}
+
+.contact-page__content {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.contact-page__content .content__item {
+  margin: 10px 100px 10px 0;
+}
+
+.contact-page__content .icon {
+  margin: 10px auto;
+}
+
+.contact-page a:hover {
+  color: lightgray;
+}
+
+footer {
+  background-color: #0C1821;
+  height: 40px;
+  text-align: center;
+  margin: 0;
+}
+
+footer p {
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
 .cut-out {
   margin: auto auto 50px auto;
+  text-align: center;
+}
+
+.cut-out--bottom {
+  margin: auto auto 0 auto;
   text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

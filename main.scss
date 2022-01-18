@@ -106,7 +106,47 @@ nav {
     }
   }
 }
+.contact-page {
+  background-color: $back-main;
+  padding: 0 10px;
+
+  &__content {
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .content__item {
+      margin: 10px 100px 10px 0;
+    }
+    .icon {
+      margin: 10px auto;
+    }
+  }
+  a:hover {
+    color: rgb(211, 211, 211);
+  }
+}
+
+footer {
+  background-color: $bar;
+  height: 40px;
+  text-align: center;
+  margin: 0;
+  p {
+    padding: 10px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
 .cut-out {
   margin: auto auto 50px auto;
+  text-align: center
+
+}
+.cut-out--bottom {
+  margin: auto auto 0 auto;
   text-align: center
 }
