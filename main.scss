@@ -19,50 +19,51 @@ $white: #eee;
   margin: 10px;
 }
 nav {
+  position: fixed;
+  width: 100%;
   height: 50px;
   display: flex;
   background-color: $bar;
   align-items: center;
   justify-content: flex-end;
 }
+
 .landing-page {
   color: $white;
-  padding: 20px 20px 50px 10px;
+  padding: 70px 20px 50px 10px;
   background-color: $back-main;
 
   h1 {
-    font-size: 2.8em;
+    font-size: 3.5em;
   }
   p {
+    font-size: 1.5em;
     margin-top: 10px;
   }
 
   &__bottom {
-    margin-top: 300px;
+    margin-top: 45vh;
   }
-  // .typed h1 {
-  //   overflow: hidden;
-  //   border-right: 0.15em solid $white;
-  //   margin: 0;
-  //   padding: 0;
-  //   white-space: nowrap;
-  //   animation:
-  //     typing 1s steps(24), blink .75s step-end infinite;
-  // }
-  // @keyframes typing {
-  //   from {width: 0}
-  //   to {width: 100%;}
-  // }
-  // @keyframes blink {
-  //   50% {border-color: transparent}
-  // }
+  .typed {
+    border-right: 0.15em solid $white;
+    width: fit-content;
+    white-space: nowrap;
+    animation:
+      typing 1.2s, blink 1s step-end infinite;
+  }
+  @keyframes typing {
+    50% {border-color: $white}
+  }
+  @keyframes blink {
+    50% {border-color: transparent}
+  }
 }
 .stack-page {
   background-color: $back-two;
   color:$white;
 
   &__top {
-    padding: 0px 0 0 10px;
+    padding: 50px 0 0 10px;
     
     p {
       padding-bottom: 20px;
@@ -71,9 +72,10 @@ nav {
   &__content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 
     .content__stack-item {
-      padding: 0 50px;
+      padding: 0 50px 0 10px;
       display: flex;
       align-items: center;
     }
@@ -149,4 +151,92 @@ footer {
 .cut-out--bottom {
   margin: auto auto 0 auto;
   text-align: center
+}
+
+@media screen and (min-width: 767px) {
+  p {
+    font-size: 1.5em;
+  }
+  .landing-page {
+    padding-left: 2vw;
+    h1 {
+      font-size: 7em;
+    }
+    p {
+      font-size: 2em;
+    }
+
+  }
+  .stack-page {
+    background-color: $back-two;
+    color:$white;
+    padding-left: 2vw;
+    padding-bottom: 200px;
+    &__top {
+      padding: 40px 0 40px 10px;
+      
+      p {
+        padding-bottom: 40px;
+      }
+    }
+    &__content {
+
+      .content__stack-item {
+        padding: 0 10vw 30px 10vw;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  
+  .projects-page {
+    padding-left: 0;
+    padding-bottom: 100px;
+    &__content {
+      .content__project {
+        padding: 20px;
+        width: 380px;
+        h2 {
+          margin-bottom: 10px;
+          font-size: 3em;
+        }
+        .project_image {
+          width: 380px;
+          height: 380px;
+          background-color: $white;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  .contact-page {
+    background-color: $back-main;
+    padding-left: 2vw;
+    padding: 0 10px;
+
+    &__headings {
+      padding-left: 2vw;
+      margin-top: 50px;
+    }
+  
+    &__content {
+      padding-top: 100px;
+      padding-left: 2vw;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: row;
+      padding-bottom: 50px;
+      margin-left: 20px;
+  
+      .content__item {
+        margin: 10px 30px 10px 0;
+      }
+      .icon {
+        margin: 10px auto;
+      }
+    }
+  }
+
 }

@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
-<body onload="typeWriter()">
+<body onload='typeWriter()'>
+  <script src="main.js"></script>
   <nav>
     <div class="icon"></div>
     <div class="icon"></div>
@@ -17,10 +18,7 @@
   <main id ="top">
     <section class="landing-page">
       <div class="landing-page__top">
-        <div class="typed">
-          <h1 id="typed"></h1>
-          <script src="typeWriterEffect.js"></script>
-        </div>
+          <h1 class="typed" id="typed"></h1>
         <p>my name is Mateusz Seredyn</p>
         <p>but you can call me Matt</p>
       </div>
@@ -39,6 +37,10 @@
         <p>What Stack you ask? This one right here...</p>
       </div>
       <section class="stack-page__content">
+        <div class="content__stack-item">
+          <div class="icon"></div>
+          <p>Stack Item</p>
+        </div>
         <div class="content__stack-item">
           <div class="icon"></div>
           <p>Stack Item</p>
