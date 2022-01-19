@@ -45,46 +45,6 @@ nav {
   margin-top: 300px;
 }
 
-.landing-page .typed h1 {
-  overflow: hidden;
-  border-right: 0.15em solid #eee;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-animation: typing 1s steps(24), blink 0.75s step-end infinite;
-          animation: typing 1s steps(24), blink 0.75s step-end infinite;
-}
-
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
 .stack-page {
   background-color: #324A5F;
   color: #eee;

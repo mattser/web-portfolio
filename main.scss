@@ -40,22 +40,22 @@ nav {
   &__bottom {
     margin-top: 300px;
   }
-  .typed h1 {
-    overflow: hidden;
-    border-right: 0.15em solid $white;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    animation:
-      typing 1s steps(24), blink .75s step-end infinite;
-  }
-  @keyframes typing {
-    from {width: 0}
-    to {width: 100%;}
-  }
-  @keyframes blink {
-    50% {border-color: transparent}
-  }
+  // .typed h1 {
+  //   overflow: hidden;
+  //   border-right: 0.15em solid $white;
+  //   margin: 0;
+  //   padding: 0;
+  //   white-space: nowrap;
+  //   animation:
+  //     typing 1s steps(24), blink .75s step-end infinite;
+  // }
+  // @keyframes typing {
+  //   from {width: 0}
+  //   to {width: 100%;}
+  // }
+  // @keyframes blink {
+  //   50% {border-color: transparent}
+  // }
 }
 .stack-page {
   background-color: $back-two;
