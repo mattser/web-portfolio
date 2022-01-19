@@ -5,6 +5,8 @@ $back-three: #56697B;
 $bar: #0C1821;
 $white: #eee;
 
+// Styling Code
+// Global Styles
 * {
   margin: 0;
   padding: 0;
@@ -12,57 +14,70 @@ $white: #eee;
   color: $white;
 }
 .icon {
-  width: 40px;
-  height: 40px;
-  background-color: $white;
-  border-radius: 10px;
+  font-size: 40px;
   margin: 10px;
+
+  &--blank {
+    background-color: $white;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  &:hover {
+    color: rgb(211, 211, 211);
+  }
 }
+
+// Nav Specific Styling
 nav {
+  position: fixed;
+  width: 100%;
   height: 50px;
   display: flex;
   background-color: $bar;
   align-items: center;
   justify-content: flex-end;
 }
+
+// Landing Page Specific Styling
 .landing-page {
   color: $white;
-  padding: 20px 20px 50px 10px;
+  padding: 70px 20px 50px 10px;
   background-color: $back-main;
 
   h1 {
-    font-size: 2.8em;
+    font-size: 3.5em;
   }
   p {
+    font-size: 1.5em;
     margin-top: 10px;
   }
 
   &__bottom {
-    margin-top: 300px;
+    margin-top: 45vh;
   }
-  .typed h1 {
-    overflow: hidden;
+  .typed {
     border-right: 0.15em solid $white;
-    margin: 0;
-    padding: 0;
+    width: fit-content;
     white-space: nowrap;
     animation:
-      typing 1s steps(24), blink .75s step-end infinite;
+      typing 1.2s, blink 1s step-end infinite;
   }
   @keyframes typing {
-    from {width: 0}
-    to {width: 100%;}
+    50% {border-color: $white}
   }
   @keyframes blink {
     50% {border-color: transparent}
   }
 }
+
+// Stack Page Specific Styling
 .stack-page {
   background-color: $back-two;
   color:$white;
 
   &__top {
-    padding: 0px 0 0 10px;
+    padding: 50px 0 0 10px;
     
     p {
       padding-bottom: 20px;
@@ -71,15 +86,22 @@ nav {
   &__content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 
     .content__stack-item {
-      padding: 0 50px;
+      padding: 5px 50px 5px 10px;
       display: flex;
       align-items: center;
+      p {
+        margin-left: 1vw;
+        font-size: 2em;
+      }
     }
   }
   padding-bottom: 80px;
 }
+
+// Project Page Specific Styling
 .projects-page {
   background-color: $back-three;
 
@@ -91,7 +113,7 @@ nav {
     
     padding: 5px;
     .content__project {
-      padding: 20px;
+      padding: 100px 20px;
       width: 320px;
       h2 {
         margin-bottom: 10px;
@@ -103,9 +125,16 @@ nav {
         background-color: $white;
         margin-bottom: 5px;
       }
+      .project-icons {
+        padding-top: 5px;
+        display: flex;
+        justify-content: space-around;
+      }
     }
   }
 }
+
+// Contact Page Specific Styling
 .contact-page {
   background-color: $back-main;
   padding: 0 10px;
@@ -129,6 +158,7 @@ nav {
   }
 }
 
+// Footer Specific Styling
 footer {
   background-color: $bar;
   height: 40px;
@@ -141,6 +171,8 @@ footer {
     text-decoration: none;
   }
 }
+
+// Styling for Semi-circular Cutouts
 .cut-out {
   margin: auto auto 50px auto;
   text-align: center
@@ -149,4 +181,100 @@ footer {
 .cut-out--bottom {
   margin: auto auto 0 auto;
   text-align: center
+}
+
+// Media Queries (Desktop Specific Styling
+@media screen and (min-width: 767px) {
+  // Global Font Increase
+  p {
+    font-size: 1.5em;
+  }
+
+  // Desktop Landing Page Styling
+  .landing-page {
+    padding-left: 2vw;
+    h1 {
+      font-size: 7em;
+    }
+    p {
+      font-size: 2em;
+    }
+
+  }
+
+  // Desktop Stack Page Styling
+  .stack-page {
+    background-color: $back-two;
+    color:$white;
+    padding-left: 2vw;
+    padding-bottom: 200px;
+    &__top {
+      padding: 40px 0 40px 10px;
+      
+      p {
+        padding-bottom: 40px;
+      }
+    }
+    &__content {
+
+      .content__stack-item {
+        padding: 0 10vw 30px 10vw;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  // Desktop Projects Page Styling
+  .projects-page {
+    padding-left: 0;
+    padding-bottom: 100px;
+    &__content {
+      .content__project {
+        padding: 20px;
+        width: 380px;
+        h2 {
+          margin-bottom: 10px;
+          font-size: 3em;
+        }
+        .project_image {
+          width: 380px;
+          height: 380px;
+          background-color: $white;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  // Desktop Contact-page Styling
+  .contact-page {
+    background-color: $back-main;
+    padding-left: 2vw;
+    padding: 0 10px;
+
+    &__headings {
+      padding-left: 2vw;
+      margin-top: 50px;
+    }
+  
+    &__content {
+      padding-top: 100px;
+      padding-left: 2vw;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: row;
+      padding-bottom: 50px;
+      margin-left: 20px;
+  
+      .content__item {
+        margin: 10px 30px 10px 0;
+      }
+      .icon {
+        margin: 10px auto;
+      }
+    }
+  }
+
 }
