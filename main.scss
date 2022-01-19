@@ -5,6 +5,8 @@ $back-three: #56697B;
 $bar: #0C1821;
 $white: #eee;
 
+// Styling Code
+// Global Styles
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +14,21 @@ $white: #eee;
   color: $white;
 }
 .icon {
-  width: 40px;
-  height: 40px;
-  background-color: $white;
-  border-radius: 10px;
+  font-size: 40px;
   margin: 10px;
+
+  &--blank {
+    background-color: $white;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  &:hover {
+    color: rgb(211, 211, 211);
+  }
 }
+
+// Nav Specific Styling
 nav {
   position: fixed;
   width: 100%;
@@ -28,6 +39,7 @@ nav {
   justify-content: flex-end;
 }
 
+// Landing Page Specific Styling
 .landing-page {
   color: $white;
   padding: 70px 20px 50px 10px;
@@ -58,6 +70,8 @@ nav {
     50% {border-color: transparent}
   }
 }
+
+// Stack Page Specific Styling
 .stack-page {
   background-color: $back-two;
   color:$white;
@@ -75,13 +89,19 @@ nav {
     justify-content: space-around;
 
     .content__stack-item {
-      padding: 0 50px 0 10px;
+      padding: 5px 50px 5px 10px;
       display: flex;
       align-items: center;
+      p {
+        margin-left: 1vw;
+        font-size: 2em;
+      }
     }
   }
   padding-bottom: 80px;
 }
+
+// Project Page Specific Styling
 .projects-page {
   background-color: $back-three;
 
@@ -108,6 +128,8 @@ nav {
     }
   }
 }
+
+// Contact Page Specific Styling
 .contact-page {
   background-color: $back-main;
   padding: 0 10px;
@@ -131,6 +153,7 @@ nav {
   }
 }
 
+// Footer Specific Styling
 footer {
   background-color: $bar;
   height: 40px;
@@ -143,6 +166,8 @@ footer {
     text-decoration: none;
   }
 }
+
+// Styling for Semi-circular Cutouts
 .cut-out {
   margin: auto auto 50px auto;
   text-align: center
@@ -153,10 +178,14 @@ footer {
   text-align: center
 }
 
+// Media Queries (Desktop Specific Styling
 @media screen and (min-width: 767px) {
+  // Global Font Increase
   p {
     font-size: 1.5em;
   }
+
+  // Desktop Landing Page Styling
   .landing-page {
     padding-left: 2vw;
     h1 {
@@ -167,6 +196,8 @@ footer {
     }
 
   }
+
+  // Desktop Stack Page Styling
   .stack-page {
     background-color: $back-two;
     color:$white;
@@ -189,7 +220,7 @@ footer {
     }
   }
 
-  
+  // Desktop Projects Page Styling
   .projects-page {
     padding-left: 0;
     padding-bottom: 100px;
@@ -210,6 +241,8 @@ footer {
       }
     }
   }
+
+  // Desktop Contact-page Styling
   .contact-page {
     background-color: $back-main;
     padding-left: 2vw;
