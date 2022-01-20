@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,11 +39,12 @@ nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  z-index: 20;
 }
 
 .landing-page {
   color: #eee;
-  padding: 70px 20px 50px 10px;
+  padding: 0 20px 50px 0;
   background-color: #1B2A41;
 }
 
@@ -93,11 +98,10 @@ nav {
 .stack-page {
   background-color: #324A5F;
   color: #eee;
-  padding-bottom: 80px;
 }
 
 .stack-page__top {
-  padding: 50px 0 0 10px;
+  padding: 0px 0 0 10px;
 }
 
 .stack-page__top p {
@@ -223,13 +227,23 @@ footer a {
 }
 
 .cut-out {
-  margin: auto auto 50px auto;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.cut-out--bottom {
-  margin: auto auto 0 auto;
-  text-align: center;
+.cut-out .down-arrow {
+  z-index: 2;
+  margin-top: 2px;
+  font-size: 1.5em;
+}
+
+.cut-out svg {
+  position: absolute;
+  z-index: 1;
 }
 
 @media screen and (min-width: 767px) {
@@ -249,10 +263,9 @@ footer a {
     background-color: #324A5F;
     color: #eee;
     padding-left: 2vw;
-    padding-bottom: 200px;
   }
   .stack-page__top {
-    padding: 40px 0 40px 10px;
+    padding: 0 0 40px 10px;
   }
   .stack-page__top p {
     padding-bottom: 40px;
@@ -278,7 +291,6 @@ footer a {
   }
   .projects-page {
     padding-left: 0;
-    padding-bottom: 100px;
   }
   .projects-page__content .content__project {
     padding: 20px;
@@ -296,7 +308,6 @@ footer a {
   }
   .contact-page {
     background-color: #1B2A41;
-    padding-left: 2vw;
     padding: 0 10px;
   }
   .contact-page__headings {
@@ -319,7 +330,6 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-bottom: 50px;
     margin-left: 20px;
   }
   .contact-page__content .content__item {
@@ -328,5 +338,10 @@ footer a {
   .contact-page__content .icon {
     margin: 10px auto;
   }
+}
+
+.whitespacers {
+  width: 100%;
+  height: 100px;
 }
 /*# sourceMappingURL=main.css.map */
