@@ -50,6 +50,7 @@ nav {
 
 .landing-page h1 {
   font-size: 3.5em;
+  height: 1em;
 }
 
 .landing-page p {
@@ -239,8 +240,8 @@ footer a {
   position: absolute;
   margin-top: 2px;
   font-size: 1.5em;
-  -webkit-animation: pulse 2s linear infinite;
-          animation: pulse 2s linear infinite;
+  -webkit-animation: pulse 2s ease infinite;
+          animation: pulse 2s ease infinite;
 }
 
 @-webkit-keyframes pulse {
@@ -314,16 +315,39 @@ footer a {
   .projects-page__content .content__project {
     padding: 20px;
     width: 380px;
+    height: 410px;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
   }
   .projects-page__content .content__project h2 {
     margin-bottom: 10px;
-    font-size: 3em;
+    font-size: 2em;
   }
   .projects-page__content .content__project .project_image {
     width: 380px;
     height: 380px;
     background-color: #eee;
     margin-bottom: 5px;
+  }
+  .projects-page__content .content__project p, .projects-page__content .content__project .project-icons {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    background-color: #56697B;
+  }
+  .projects-page__content .content__project:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .projects-page__content .content__project:hover p, .projects-page__content .content__project:hover .project-icons {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
   }
   .contact-page {
     background-color: #1B2A41;

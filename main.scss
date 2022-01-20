@@ -51,6 +51,7 @@ nav {
 
   h1 {
     font-size: 3.5em;
+    height: 1em;
   }
   p {
     font-size: 1.5em;
@@ -184,7 +185,7 @@ footer {
     position: absolute;
     margin-top: 2px;
     font-size: 1.5em;
-    animation: pulse 2s linear infinite;
+    animation: pulse 2s ease infinite;
 
     @keyframes pulse {
       50% {margin-top: 10px;}
@@ -249,18 +250,35 @@ footer {
   .projects-page {
     padding-left: 0;
     &__content {
+
       .content__project {
         padding: 20px;
         width: 380px;
+        height: 410px;
+        overflow: hidden;
         h2 {
           margin-bottom: 10px;
-          font-size: 3em;
+          font-size: 2em;
         }
         .project_image {
           width: 380px;
           height: 380px;
           background-color: $white;
           margin-bottom: 5px;
+        }
+        p, .project-icons {
+          transform: translateY(0);
+          background-color: $back-three;
+        }
+        transition: transform 500ms ease;
+        &:hover {
+          transform: scale(1.05);
+          
+          p, .project-icons {
+            transform: translateY(-200px);
+            transition: transform 500ms ease;
+          }
+          
         }
       }
     }
