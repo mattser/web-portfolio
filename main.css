@@ -215,11 +215,10 @@ footer {
   background-color: #0C1821;
   height: 40px;
   text-align: center;
-  margin: 0;
 }
 
 footer p {
-  padding: 10px;
+  padding: 10px 0 0 5px;
 }
 
 footer a {
@@ -237,13 +236,33 @@ footer a {
 
 .cut-out .down-arrow {
   z-index: 2;
+  position: absolute;
   margin-top: 2px;
   font-size: 1.5em;
+  -webkit-animation: pulse 2s linear infinite;
+          animation: pulse 2s linear infinite;
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    margin-top: 10px;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    margin-top: 10px;
+  }
 }
 
 .cut-out svg {
   position: absolute;
   z-index: 1;
+}
+
+.cut-out__bottom {
+  top: -40px;
+  position: relative;
 }
 
 @media screen and (min-width: 767px) {
