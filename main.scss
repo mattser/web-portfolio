@@ -7,6 +7,9 @@ $white: #eee;
 
 // Styling Code
 // Global Styles
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -37,16 +40,18 @@ nav {
   background-color: $bar;
   align-items: center;
   justify-content: flex-end;
+  z-index: 20;
 }
 
 // Landing Page Specific Styling
 .landing-page {
   color: $white;
-  padding: 70px 20px 50px 10px;
+  padding: 0 20px 50px 0;
   background-color: $back-main;
 
   h1 {
     font-size: 3.5em;
+    height: 1em;
   }
   p {
     font-size: 1.5em;
@@ -77,7 +82,7 @@ nav {
   color:$white;
 
   &__top {
-    padding: 50px 0 0 10px;
+    padding: 0px 0 0 10px;
     
     p {
       padding-bottom: 20px;
@@ -89,7 +94,7 @@ nav {
     align-items: center;
 
     .content__stack-item {
-      padding: 5px 50px 5px 10px;
+      padding: 5px 5px 5px 10px;
       display: flex;
       align-items: center;
       p {
@@ -98,7 +103,6 @@ nav {
       }
     }
   }
-  padding-bottom: 80px;
 }
 
 // Project Page Specific Styling
@@ -163,9 +167,9 @@ footer {
   background-color: $bar;
   height: 40px;
   text-align: center;
-  margin: 0;
   p {
-    padding: 10px;
+    padding: 10px 0 0 5px;
+    
   }
   a {
     text-decoration: none;
@@ -174,13 +178,29 @@ footer {
 
 // Styling for Semi-circular Cutouts
 .cut-out {
-  margin: auto auto 50px auto;
-  text-align: center
+  display: flex;
+  justify-content: center;
+  .down-arrow {
+    z-index: 2;
+    position: absolute;
+    margin-top: 2px;
+    font-size: 1.5em;
+    animation: pulse 2s ease infinite;
 
-}
-.cut-out--bottom {
-  margin: auto auto 0 auto;
-  text-align: center
+    @keyframes pulse {
+      50% {margin-top: 10px;}
+    }
+    
+  }
+  svg {
+    position: absolute;
+    z-index: 1;
+  }
+  &__bottom {
+    top: -40px;
+    position: relative;
+  }
+  
 }
 
 // Media Queries (Desktop Specific Styling
@@ -207,9 +227,8 @@ footer {
     background-color: $back-two;
     color:$white;
     padding-left: 2vw;
-    padding-bottom: 200px;
     &__top {
-      padding: 40px 0 40px 10px;
+      padding: 0 0 40px 10px;
       
       p {
         padding-bottom: 40px;
@@ -230,20 +249,36 @@ footer {
   // Desktop Projects Page Styling
   .projects-page {
     padding-left: 0;
-    padding-bottom: 100px;
     &__content {
+
       .content__project {
         padding: 20px;
         width: 380px;
+        height: 410px;
+        overflow: hidden;
         h2 {
           margin-bottom: 10px;
-          font-size: 3em;
+          font-size: 2em;
         }
         .project_image {
           width: 380px;
           height: 380px;
           background-color: $white;
           margin-bottom: 5px;
+        }
+        p, .project-icons {
+          transform: translateY(0);
+          background-color: $back-three;
+        }
+        transition: transform 500ms ease;
+        &:hover {
+          transform: scale(1.05);
+          
+          p, .project-icons {
+            transform: translateY(-200px);
+            transition: transform 500ms ease;
+          }
+          
         }
       }
     }
@@ -252,7 +287,6 @@ footer {
   // Desktop Contact-page Styling
   .contact-page {
     background-color: $back-main;
-    padding-left: 2vw;
     padding: 0 10px;
 
     &__headings {
@@ -267,7 +301,6 @@ footer {
       justify-content: space-evenly;
       align-items: center;
       flex-direction: row;
-      padding-bottom: 50px;
       margin-left: 20px;
   
       .content__item {
@@ -279,4 +312,9 @@ footer {
     }
   }
 
+}
+
+.whitespacers {
+  width: 100%;
+  height: 10vh;
 }

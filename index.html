@@ -13,7 +13,7 @@
 </head>
 <!-- Main Body Section -->
 <!-- Note loads JS Instantly -->
-<body onload='typeWriter()'>
+<body onload='typingHeader()'>
   <script src="main.js"></script>
   <!-- Navbar -->
   <nav>
@@ -25,6 +25,7 @@
 
     <!-- Initial Section for Landing Page, or the Primary Visible Page -->
     <section class="landing-page">
+      <div class="whitespacers"></div>
       <div class="landing-page__top">
           <h1 class="typed" id="typed"></h1>
         <p>my name is Mateusz Seredyn</p>
@@ -33,15 +34,18 @@
       <div class="landing-page__bottom">
         <p>I can do more than pretty websites. Scroll down to see what else I can do</p>
       </div>
+      <div class="whitespacers"></div>
     </section>
 
     <!-- Stack Page Content -->
-    <section class="stack-page">
+    <section class="stack-page" id="stack-page">
       <div class="cut-out">
+        <a class="down-arrow" href="#stack-page"><i class="fas fa-chevron-down"></i></a>
         <svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C0 22.0914 17.9086 40 40 40C62.0914 40 80 22.0914 80 0H0Z" fill="#1B2A41"/>
         </svg>
       </div>
+      <div class="whitespacers"></div>
       <div class="stack-page__top">
         <p>I'm a full stack developer</p>
         <p>What Stack you ask? This one right here...</p>
@@ -53,34 +57,38 @@
         </div>
         <div class="content__stack-item">
           <i class="icon fab fa-css3-alt"></i>
-          <p>CSS3</p>
+          <p>CSS 3</p>
         </div>
         <div class="content__stack-item">
           <i class="icon fab fa-js-square"></i>
           <p>Javascript</p>
         </div>
         <div class="content__stack-item">
-          <div class="icon--blank"></div>
-          <p>Stack Item</p>
+          <i class="icon fab fa-python"></i>
+          <p>Python</p>
         </div>
         <div class="content__stack-item">
-          <div class="icon--blank"></div>
-          <p>Stack Item</p>
+          <i class="icon fab fa-git"></i>
+          <p>Git and Version Control</p>
         </div>
         <div class="content__stack-item">
-          <div class="icon--blank"></div>
-          <p>Stack Item</p>
+          <i class="icon fab fa-linux"></i>
+          <i class="icon fab fa-ubuntu"></i>
+          <p>Linux / Ubuntu Linux</p>
         </div>
       </section>
+      <div class="whitespacers"></div>
     </section>
 
     <!-- Projects Page Section -->
-    <section class="projects-page">
+    <section class="projects-page" id="projects-page">
       <div class="cut-out">
+        <a class="down-arrow" href="#projects-page"><i class="fas fa-chevron-down"></i></a>
         <svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C0 22.0914 17.9086 40 40 40C62.0914 40 80 22.0914 80 0H0Z" fill="#324A5F"/>
         </svg>
       </div>
+      <div class="whitespacers"></div>
       <section class="projects-page__content">
         <div class="content__project">
           <h2>project_title_1</h2>
@@ -167,25 +175,30 @@
           </div>
         </div>
       </section>
+      <div class="whitespacers"></div>
     </section>
 
     <!-- Contact Page Section -->
-    <section class = "contact-page">
+    <section class = "contact-page" id="contact-page">
       <div class="cut-out">
+        <a class="down-arrow" href="#contact-page"><i class="fas fa-chevron-down"></i></a>
         <svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C0 22.0914 17.9086 40 40 40C62.0914 40 80 22.0914 80 0H0Z" fill="#56697B"/>
         </svg>
       </div>
+      <div class="whitespacers"></div>
       <div class="contact-page__headings">
         <h2>want to Know more?</h2>
       </div>
       <div class="contact-page__content">
         <p class="content__item">here's my <a href="">resume</a></p>
-        <p class="content__item">or contact me by <a href="">email</a></p>
+        <p class="content__item">or contact me by <a href="mailto:mat.seredyn@gmail.com">email</a></p>
         <a href="https://www.linkedin.com/in/mateusz-seredyn/" target="_blank"><i class="icon fab fa-linkedin"></i></a>
         <a href="https://github.com/mattser" target="_blank"><i class="icon fab fa-github-square"></i></a>
       </div>
-      <div class="cut-out--bottom">
+      <div class="whitespacers"></div>
+      <div class="cut-out cut-out__bottom">
+        <a class="down-arrow" href="#top"><i class="fas fa-chevron-up"></i></a>
         <svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0 40H80C80 17.9087 62.0914 0 40 0C17.9086 0 0 17.9087 0 40Z" fill="#0C1821"/>
           </svg>                 

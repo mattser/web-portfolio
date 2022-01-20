@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,16 +39,18 @@ nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  z-index: 20;
 }
 
 .landing-page {
   color: #eee;
-  padding: 70px 20px 50px 10px;
+  padding: 0 20px 50px 0;
   background-color: #1B2A41;
 }
 
 .landing-page h1 {
   font-size: 3.5em;
+  height: 1em;
 }
 
 .landing-page p {
@@ -93,11 +99,10 @@ nav {
 .stack-page {
   background-color: #324A5F;
   color: #eee;
-  padding-bottom: 80px;
 }
 
 .stack-page__top {
-  padding: 50px 0 0 10px;
+  padding: 0px 0 0 10px;
 }
 
 .stack-page__top p {
@@ -118,7 +123,7 @@ nav {
 }
 
 .stack-page__content .content__stack-item {
-  padding: 5px 50px 5px 10px;
+  padding: 5px 5px 5px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,11 +216,10 @@ footer {
   background-color: #0C1821;
   height: 40px;
   text-align: center;
-  margin: 0;
 }
 
 footer p {
-  padding: 10px;
+  padding: 10px 0 0 5px;
 }
 
 footer a {
@@ -223,13 +227,43 @@ footer a {
 }
 
 .cut-out {
-  margin: auto auto 50px auto;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.cut-out--bottom {
-  margin: auto auto 0 auto;
-  text-align: center;
+.cut-out .down-arrow {
+  z-index: 2;
+  position: absolute;
+  margin-top: 2px;
+  font-size: 1.5em;
+  -webkit-animation: pulse 2s ease infinite;
+          animation: pulse 2s ease infinite;
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    margin-top: 10px;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    margin-top: 10px;
+  }
+}
+
+.cut-out svg {
+  position: absolute;
+  z-index: 1;
+}
+
+.cut-out__bottom {
+  top: -40px;
+  position: relative;
 }
 
 @media screen and (min-width: 767px) {
@@ -249,10 +283,9 @@ footer a {
     background-color: #324A5F;
     color: #eee;
     padding-left: 2vw;
-    padding-bottom: 200px;
   }
   .stack-page__top {
-    padding: 40px 0 40px 10px;
+    padding: 0 0 40px 10px;
   }
   .stack-page__top p {
     padding-bottom: 40px;
@@ -278,15 +311,20 @@ footer a {
   }
   .projects-page {
     padding-left: 0;
-    padding-bottom: 100px;
   }
   .projects-page__content .content__project {
     padding: 20px;
     width: 380px;
+    height: 410px;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
   }
   .projects-page__content .content__project h2 {
     margin-bottom: 10px;
-    font-size: 3em;
+    font-size: 2em;
   }
   .projects-page__content .content__project .project_image {
     width: 380px;
@@ -294,9 +332,25 @@ footer a {
     background-color: #eee;
     margin-bottom: 5px;
   }
+  .projects-page__content .content__project p, .projects-page__content .content__project .project-icons {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    background-color: #56697B;
+  }
+  .projects-page__content .content__project:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .projects-page__content .content__project:hover p, .projects-page__content .content__project:hover .project-icons {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
+  }
   .contact-page {
     background-color: #1B2A41;
-    padding-left: 2vw;
     padding: 0 10px;
   }
   .contact-page__headings {
@@ -319,7 +373,6 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-bottom: 50px;
     margin-left: 20px;
   }
   .contact-page__content .content__item {
@@ -328,5 +381,10 @@ footer a {
   .contact-page__content .icon {
     margin: 10px auto;
   }
+}
+
+.whitespacers {
+  width: 100%;
+  height: 10vh;
 }
 /*# sourceMappingURL=main.css.map */
