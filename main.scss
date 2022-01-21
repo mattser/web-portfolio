@@ -64,6 +64,8 @@ nav {
   .typed {
     border-right: 0.15em solid $white;
     width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
     white-space: nowrap;
     animation:
       typing 1.2s, blink 1s step-end infinite;
