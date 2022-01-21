@@ -303,13 +303,15 @@ footer a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .projects-page {
     padding-left: 0;
   }
   .projects-page__content {
-    -ms-flex-preferred-size: 33%;
-        flex-basis: 33%;
+    max-width: 1400px;
   }
   .projects-page__content .content__project {
     padding: 20px;
@@ -335,6 +337,7 @@ footer a {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     background-color: #56697B;
+    width: 380px;
   }
   .projects-page__content .content__project:hover {
     -webkit-transform: scale(1.05);
@@ -379,6 +382,18 @@ footer a {
   }
   .contact-page__content .icon {
     margin: 10px auto;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .stack-page__content {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .stack-page__content .content__stack-item {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

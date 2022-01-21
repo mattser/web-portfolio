@@ -243,6 +243,7 @@ footer {
       .content__stack-item {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
       }
     }
   }
@@ -251,7 +252,7 @@ footer {
   .projects-page {
     padding-left: 0;
     &__content {
-      flex-basis: 33%;
+      max-width: 1400px;
       .content__project {
         padding: 20px;
         width: 380px;
@@ -270,6 +271,7 @@ footer {
         p, .project-icons {
           transform: translateY(0);
           background-color: $back-three;
+          width: 380px;
         }
         transition: transform 500ms ease;
         &:hover {
@@ -313,6 +315,18 @@ footer {
     }
   }
 
+}
+
+@media screen and (min-width:1400px) {
+  .stack-page {
+    &__content {
+      grid-template-columns: 1fr 1fr 1fr;
+      
+      .content__stack-item {
+        justify-content: flex-start;
+      }
+    }
+  }
 }
 
 .whitespacers {
