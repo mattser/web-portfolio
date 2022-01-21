@@ -91,14 +91,15 @@ nav {
     }
   }
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
 
     .content__stack-item {
-      padding: 5px 5px 5px 10px;
+      text-align: center;
       display: flex;
       align-items: center;
+      justify-content: center;
       p {
         margin-left: 1vw;
         font-size: 2em;
@@ -237,13 +238,12 @@ footer {
       }
     }
     &__content {
-      justify-content: space-around;
-      flex-wrap: wrap;
-      flex-direction: row;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
       .content__stack-item {
-        padding: 0 10vw 30px 10vw;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
       }
     }
   }
@@ -252,7 +252,7 @@ footer {
   .projects-page {
     padding-left: 0;
     &__content {
-
+      max-width: 1400px;
       .content__project {
         padding: 20px;
         width: 380px;
@@ -271,6 +271,7 @@ footer {
         p, .project-icons {
           transform: translateY(0);
           background-color: $back-three;
+          width: 380px;
         }
         transition: transform 500ms ease;
         &:hover {
@@ -314,6 +315,18 @@ footer {
     }
   }
 
+}
+
+@media screen and (min-width:1400px) {
+  .stack-page {
+    &__content {
+      grid-template-columns: 1fr 1fr 1fr;
+      
+      .content__stack-item {
+        justify-content: flex-start;
+      }
+    }
+  }
 }
 
 .whitespacers {

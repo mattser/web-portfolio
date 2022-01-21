@@ -112,26 +112,25 @@ nav {
 }
 
 .stack-page__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .stack-page__content .content__stack-item {
-  padding: 5px 5px 5px 10px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .stack-page__content .content__stack-item p {
@@ -293,26 +292,26 @@ footer a {
     padding-bottom: 40px;
   }
   .stack-page__content {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 100%;
   }
   .stack-page__content .content__stack-item {
-    padding: 0 10vw 30px 10vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .projects-page {
     padding-left: 0;
+  }
+  .projects-page__content {
+    max-width: 1400px;
   }
   .projects-page__content .content__project {
     padding: 20px;
@@ -338,6 +337,7 @@ footer a {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     background-color: #56697B;
+    width: 380px;
   }
   .projects-page__content .content__project:hover {
     -webkit-transform: scale(1.05);
@@ -382,6 +382,18 @@ footer a {
   }
   .contact-page__content .icon {
     margin: 10px auto;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .stack-page__content {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .stack-page__content .content__stack-item {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
