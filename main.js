@@ -1,5 +1,5 @@
 // Global Variables for the Typing Animation
-const textArr = ["hello world!","dzien dobry!","404:Header Not Found","scroll down!","now in HD!","Uncaught TypeError:"];
+const textArr = ["hello world!","dzień dobry!","404:Header Not Found","scroll down!","now in HD!","Uncaught TypeError:"];
 const speed = 100;
 let i = 0;
 

@@ -44,7 +44,7 @@ nav {
 
 .landing-page {
   color: #eee;
-  padding: 0 20px 50px 0;
+  padding: 0 20px 0 10px;
   background-color: #1B2A41;
 }
 
@@ -59,7 +59,7 @@ nav {
 }
 
 .landing-page__bottom {
-  margin-top: 45vh;
+  margin-top: 20vh;
 }
 
 .landing-page .typed {
@@ -131,11 +131,12 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 10px 0;
 }
 
 .stack-page__content .content__stack-item p {
   margin-left: 1vw;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .projects-page {
@@ -143,20 +144,22 @@ nav {
 }
 
 .projects-page__content {
-  margin: 50px auto auto auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .projects-page__content .content__project {
-  padding: 100px 20px;
+  padding: 20px 0;
   width: 320px;
 }
 
@@ -166,14 +169,14 @@ nav {
 }
 
 .projects-page__content .content__project .project_image {
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   background-color: #eee;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .projects-page__content .content__project .project-icons {
-  padding-top: 5px;
+  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,11 +205,18 @@ nav {
 }
 
 .contact-page__content .content__item {
-  margin: 10px 100px 10px 0;
+  font-size: 1.2em;
+  padding: 5px 0;
 }
 
-.contact-page__content .icon {
-  margin: 10px auto;
+.contact-page__content .content__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .contact-page a:hover {
@@ -281,6 +291,9 @@ footer a {
   .landing-page p {
     font-size: 2em;
   }
+  .landing-page__bottom {
+    margin-top: 45vh;
+  }
   .stack-page {
     background-color: #324A5F;
     color: #eee;
@@ -295,6 +308,8 @@ footer a {
   .stack-page__content {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    margin: auto;
+    max-width: 1400px;
     width: 100%;
   }
   .stack-page__content .content__stack-item {
@@ -313,6 +328,17 @@ footer a {
   }
   .projects-page__content {
     max-width: 1400px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
   }
   .projects-page__content .content__project {
     padding: 20px;
@@ -354,21 +380,20 @@ footer a {
   }
   .contact-page {
     background-color: #1B2A41;
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .contact-page__headings {
-    padding-left: 2vw;
     margin-top: 50px;
+    font-size: 2em;
   }
   .contact-page__content {
-    padding-top: 100px;
-    padding-left: 2vw;
+    padding-top: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -376,13 +401,14 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-left: 20px;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
   }
   .contact-page__content .content__item {
-    margin: 10px 30px 10px 0;
+    font-size: 1.5em;
   }
-  .contact-page__content .icon {
-    margin: 10px auto;
+  .contact-page__content .content__icons {
+    width: 30%;
   }
 }
 
@@ -401,5 +427,9 @@ footer a {
 .whitespacers {
   width: 100%;
   height: 10vh;
+}
+
+.whitespacers__bottom {
+  height: 30px;
 }
 /*# sourceMappingURL=main.css.map */
